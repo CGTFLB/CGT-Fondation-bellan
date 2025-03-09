@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGT Fondation Léopold Bellan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Syndicat CGT - Fondation Léopold Bellan</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+                <li><a href="outils.html">Outils</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="nos-tracts.html">Nos tracts</a></li>
+                <li><a href="nos-actions.html">Nos actions</a></li>
+                <li><a href="se-syndiquer.html">Se syndiquer</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Bienvenue sur le site du Syndicat CGT de la Fondation Léopold Bellan</h2>
+        <p>Découvrez nos actions, nos revendications et rejoignez-nous !</p>
+    </section>
+
+    <script>
+        fetch('https://www.sante.cgt.fr/rss.xml')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('rss-feed').innerHTML = "<p>Actualités mises à jour...</p>";
+            });
+    </script>
+</body>
+</html>
